@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    max-width: 100dvw;
+    overflow: hidden;
     line-height: normal;
   }
   
@@ -26,6 +28,7 @@ body {
     /* Colors */
     --color-white: #fff;
     --color-blue: #0029ff;
+    --color-bluefade: #4965f0;
     --color-gray-100: #fdfdfd;
     --color-gray-200: #fcfcfc;
     --color-gray-300: #fcfbfb;

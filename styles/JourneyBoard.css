@@ -1,43 +1,38 @@
-@import url(styles/Header.css);
-@import url(styles/JourneyBoard.css);
-
-.notice-board {
+.journey-board {
     position: absolute;
     top: 15%;
-    right: 0;
+    left: 0;
     /* later change it to nav height or convert it px */
-    height: 40dvh;
+    height: 80dvh;
     width: 30dvw;
     background-color: var(--color-white);
-    box-shadow: -3px 0 3px rgba(0, 0, 0, 0.33);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
     border-radius: var(--br-xl);
+    border-top-left-radius: 0;
     z-index: 98;
     overflow: hidden;
-    transform: translateX(85%);
+    transform: translateX(-85%);
     transition: transform 0.3s ease;
 }
 
-.notice-board .heading {
+.journey-board .heading {
     display: flex;
-    height: 100%;
-    width: 15%;
-    flex-direction: column-reverse;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: var(--color-black);
     color: var(--color-white);
     margin: 0;
+    padding: var(--padding-3xs) 0;
 }
 
-.notice-board .heading h2 {
+.journey-board .heading h2 {
     margin: 0;
-    writing-mode: vertical-rl; 
-    text-orientation: upright;
-    font: var(--font-size-basic) var(--font-poppins);
+    font: var(--font-size-xl) var(--font-poppins);
     font-weight: 300;
+    padding-left: var(--padding-xs);
 }
 
-.heading .arrow-right-icon {
+.heading .arrow-left-icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,17 +40,18 @@
     aspect-ratio: 1;
     border-radius: 50%;
     background-color: var(--color-white);
+    margin-right: var(--padding-3xs);
     cursor: pointer;
 }
 
-.arrow-right-icon .notice-board-checkbox {
+.arrow-left-icon .journey-board-checkbox {
     display: none;
 }
 
-.notice-board.open {
+.journey-board.open {
     transform: translateX(0);
 }
 
-.notice-board .content {
+.journey-board .content {
     margin: 0 var(--padding-3xs);
 }

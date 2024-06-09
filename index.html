@@ -19,6 +19,7 @@
 </head>
 
 <body>
+
   <header class="NavigationBar">
     <img class="logo-1-icon" loading="lazy" alt="" src="https://deepthought.education/assets/images/logo/logo.svg">
 
@@ -65,6 +66,41 @@
     </div>
   </header>
 
+  <div class="journey-board">
+    <div class="heading">
+      <h2>Journey Board</h2>
+      <label class="arrow-left-icon">
+        <input type="checkbox" class="journey-board-checkbox">
+        <script>
+          document.querySelector('.journey-board-checkbox').addEventListener('change', function () {
+            document.querySelector('.journey-board').classList.toggle('open', this.checked);
+          });
+        </script>
+      </label>
+    </div>
+    <div class="content">
+      <h3>Explore The world of management</h3>
+      <ul>
+        <li>technical project management</li>
+        <li>threadbuild</li>
+        <li>sturcture your pointer</li>
+        <li>4SA Method</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="notice-board">
+    <div class="heading">
+      <h2>Notice Board</h2>
+      <label class="arrow-right-icon">
+        <input type="checkbox" class="notice-board-checkbox">
+        <script>
+          document.querySelector('.notice-board-checkbox').addEventListener('change', function () {
+            document.querySelector('.notice-board').classList.toggle('open', this.checked);
+          });
+        </script>
+      </label>
+  </div>
 
 
 
