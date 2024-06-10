@@ -17,3 +17,22 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
+
+
+
+.option1{
+    background-image: url(../assets/question-mark.png);
+}
+.option2{
+    background-image: url(../assets/meeting.png);
+}
+.option3{
+    background-image: url(../assets/schedule.png);
+}
+.option1,
+.option2,
+.option3{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+}

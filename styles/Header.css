@@ -41,12 +41,26 @@
 }
 
 .nav-option{
-
+    display: flex;
+    justify-content: center; 
+    align-items: center;
     height: var(--br-11xl);
     aspect-ratio: 1;
     border-radius: 50%;
     background-color: var(--color-bluefade);
+    overflow: hidden;
 }
+
+
+.nav-home img,
+.nav-tool img{
+    width: 40px;
+    transform: translateY(4px);
+}
+.nav-notification{
+    width: 30px;
+}
+
 .nav-profile{
     background-color: var(--color-gray-600);
     overflow: hidden;
