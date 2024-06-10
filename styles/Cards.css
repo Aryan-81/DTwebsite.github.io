@@ -110,10 +110,15 @@
     transition: all 0.3s ease-in-out;
 }
 .dropdown-container .dropdown-container-element{
+    max-height: 0;
+    overflow: hidden;
     display: none;
 }
 .dropdown-container.drop-open .dropdown-container-element{
+    max-height: none;
+    overflow: auto;
     display: block;
+    
 }
 
 .card-ctr2-1 {
