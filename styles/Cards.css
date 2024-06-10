@@ -1,10 +1,10 @@
-.card-wrapper{
+.card-wrapper {
     --card-width: 500px;
     --card-height: 550px;
 }
 
 
-.card-wrapper{
+.card-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(var(--card-width), 1fr));
     grid-gap: var(--gap-xl);
@@ -25,18 +25,25 @@
     }
 }
 
-.card{
+.card {
+    position: relative;
     height: var(--card-height);
     width: var(--card-width);
     background-color: var(--color-white);
     border-radius: var(--br-xl);
-    box-shadow: 0 0 5px rgba(0,0,0,0.33); 
-    overflow: hidden; /*temprory measerment later be removed*/
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.33);
+    overflow-x: hidden;
     margin: var(--gap-xs) auto;
 }
+.card::-webkit-scrollbar {
+    display: none;
+}
 
-.card-heading{
-    position: relative;
+.card-heading {
+    position: sticky;
+    z-index: 9;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,19 +51,22 @@
     background-color: var(--color-black);
     margin: 0;
 }
-.card-heading .i{
+
+.card-heading .i {
     position: absolute;
-    top: 50%;transform: translateY(-50%);
-    right:var(--gap-xl);
+    top: 50%;
+    transform: translateY(-50%);
+    right: var(--gap-xl);
     text-align: center;
     height: 20px;
     aspect-ratio: 1;
     border-radius: 50%;
     color: var(--color-black);
     background-color: var(--color-white);
-    cursor:default;
+    cursor: default;
 }
-.description{
+
+.description {
     position: relative;
     padding: 0 var(--padding-3xs);
 }
@@ -67,7 +77,8 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis " [........]";
-    max-height: 3em; /* Adjust based on line height */
+    max-height: 3em;
+    /* Adjust based on line height */
 }
 
 .read-more {
@@ -80,11 +91,117 @@
     right: var(--padding-3xs);
     padding: 0;
     margin: 0;
+    z-index: 0;
     transform: translateY(100%);
     background-color: var(--color-white);
 }
+
 .description-text.expanded {
     display: block;
     max-height: none;
     -webkit-line-clamp: none;
+}
+
+
+.card-ctr2-1 {
+    overflow: hidden;
+}
+
+.thread-header {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-38xl);
+    background: var(--color-lightgray-100);
+    padding: var(--gap-sm);
+    cursor: pointer;
+    border-bottom: 1px solid var(--color-gray);
+}
+
+.thread-title {
+    font-weight: bold;
+}
+
+.toggle-arrow {
+    font-size: 1.2em;
+}
+
+.sub-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+    max-height: 1000px;
+    /* Ensure it can fully expand */
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.sub-container.collapsed {
+    max-height: 0;
+    opacity: 0;
+}
+
+.sub-thread,
+.summary {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-light-gray);
+    padding: var(--gap-sm);
+    border-radius: var(--br-md);
+}
+
+.sub-thread-heading,
+.summary-heading {
+    font-weight: bold;
+    margin-bottom: var(--gap-xs);
+}
+
+
+.controls {
+    display: flex;
+    gap: var(--gap-xs);
+    margin-top: var(--gap-sm);
+}
+
+.controls button,
+.controls select {
+    background: none;
+    border: 1px solid var(--color-gray);
+    padding: var(--gap-xs);
+    border-radius: var(--br-sm);
+    cursor: pointer;
+}
+
+.sub-thread-button {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: var(--gap-sm);
+    border-radius: var(--br-md);
+    cursor: pointer;
+    margin-top: var(--gap-sm);
+}
+
+.card-ctr3-1{
+    margin: var(--padding-7xs) var(--padding-9xl);
+    font-family: var(--font-poppins);
+}
+.card-ctr3-1-title>h3{
+    font-family: inherit;
+}
+.card-ctr3-1-title textarea{
+    font-family: inherit;
+    font-size: var(--font-size-base);
+    padding-top:var(--padding-7xs);
+    height: 30px;
+    width: 100%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.33);
+    border-radius: var(--br-8xs);
+    resize: none;
+}
+.card-ctr3-1-container>h3{
+    font-family: inherit;
+}
+.card-ctr3-1-container  .tox.tox-tinymce {
+    box-shadow:  0 0 8px rgba(0, 0, 0, 0.33);
 }

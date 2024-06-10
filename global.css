@@ -24,12 +24,14 @@
     --color-white: #fff;
     --color-blue: #0029ff;
     --color-bluefade: #4965f0;
-    --color-gray-100: #fdfdfd;
-    --color-gray-200: #fcfcfc;
-    --color-gray-300: #fcfbfb;
-    --color-gray-400: #fafafa;
+    
+    --color-gray: #7d7d7d;
+    --color-gray-100: #e6e6e6;
+    --color-gray-200: #d2d2d2;
+    --color-gray-300: #b7b7b7;
+    --color-gray-400: #a9a9a9;
     --color-gray-500: rgba(0, 0, 0, 0.4);
-    --color-gray-600: rgb(182, 182, 182);
+    --color-gray-600: rgb(75, 75, 75);
     --color-gray-700: rgba(0, 0, 0, 0.5);
     --color-lightgray-100: #d9d7d7;
     --color-lightgray-200: #d1cece;
