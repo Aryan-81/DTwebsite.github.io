@@ -26,6 +26,7 @@
     border-style: none;
     border-radius: var(--br-8xs);
     padding: var(--padding-4xs) var(--padding-5xl);
+    cursor: pointer;
 }
 
 .ctr1>button:hover {
