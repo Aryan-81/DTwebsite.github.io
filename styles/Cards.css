@@ -71,7 +71,7 @@
     padding: 0 var(--padding-3xs);
 }
 
-.description-text {
+.wrap-word {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -92,16 +92,29 @@
     padding: 0;
     margin: 0;
     z-index: 0;
+    font-weight: 600;
+    color: var(--color-gray);
     transform: translateY(100%);
     background-color: var(--color-white);
+}   .read-more:hover{
+    color: var(--color-black);
 }
 
-.description-text.expanded {
+.wrap-word.expanded {
     display: block;
     max-height: none;
     -webkit-line-clamp: none;
 }
 
+.dropdown-container{
+    transition: all 0.3s ease-in-out;
+}
+.dropdown-container .dropdown-container-element{
+    display: none;
+}
+.dropdown-container.drop-open .dropdown-container-element{
+    display: block;
+}
 
 .card-ctr2-1 {
     overflow: hidden;
@@ -145,7 +158,7 @@
 .summary {
     display: flex;
     flex-direction: column;
-    background: var(--color-light-gray);
+    background: var(--color-lightgray-100);
     padding: var(--gap-sm);
     border-radius: var(--br-md);
 }
@@ -204,4 +217,31 @@
 }
 .card-ctr3-1-container  .tox.tox-tinymce {
     box-shadow:  0 0 8px rgba(0, 0, 0, 0.33);
+}
+
+.card-ctr4-1{
+    margin: var(--padding-7xs) 0;
+    font-family: var(--font-poppins);
+}
+.datapoint-container{
+    position: relative;
+    margin: var(--padding-xl) 0;
+}
+.datapoint-container .arrow{
+    padding: 0 var(--padding-xl);
+}
+.datapoint-heading{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: var(--gap-xl);
+    background-color: var(--color-lightgray-100);
+    border: none;
+    cursor: pointer;
+}
+.datapoint-heading>h4{
+    margin: var(--padding-xs) 0;
+}
+.datapoint-data{
+    padding: 0 var(--br-xl);
 }
