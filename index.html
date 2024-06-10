@@ -339,10 +339,10 @@
             WrapTextButton.addEventListener('click', function () {
               if (WrapTextElement.classList.contains('expanded')) {
                 WrapTextElement.classList.remove('expanded');
-                this.WrapTextContent = 'Read More';
+                this.textContent = 'Read More';
               } else {
                 WrapTextElement.classList.add('expanded');
-                this.WrapTextContent = 'Read Less';
+                this.textContent = 'Read Less';
               }
             });
           });
