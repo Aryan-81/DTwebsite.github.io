@@ -4,17 +4,15 @@
     align-items: center;
     position: fixed;
     gap: var(--gap-xs);
-    padding: var(--padding-xl);
+    padding: var(--padding-5xl);
     right: 0;
     bottom:0;
 }
 .option-icon{
-    height: 43px;
+    height: 48px;
     aspect-ratio: 1;
     border-radius: 50%;
     overflow: hidden;
     background-color: var(--color-blue);
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.33);
-
-    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
