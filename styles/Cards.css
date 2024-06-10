@@ -1,0 +1,90 @@
+.card-wrapper{
+    --card-width: 500px;
+    --card-height: 550px;
+}
+
+
+.card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--card-width), 1fr));
+    grid-gap: var(--gap-xl);
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: var(--gap-38xl) auto;
+}
+
+@media (max-width: 700px) {
+    .card-wrapper {
+        --card-width: 400px;
+        --card-height: 500px;
+        grid-template-columns: repeat(auto-fit, minmax(var(--card-width), 1fr));
+        gap: var(--gap-mini);
+        padding: var(--padding-3xs);
+    }
+}
+
+.card{
+    height: var(--card-height);
+    width: var(--card-width);
+    background-color: var(--color-white);
+    border-radius: var(--br-xl);
+    box-shadow: 0 0 5px rgba(0,0,0,0.33); 
+    overflow: hidden; /*temprory measerment later be removed*/
+    margin: var(--gap-xs) auto;
+}
+
+.card-heading{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    background-color: var(--color-black);
+    margin: 0;
+}
+.card-heading .i{
+    position: absolute;
+    top: 50%;transform: translateY(-50%);
+    right:var(--gap-xl);
+    text-align: center;
+    height: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    cursor:default;
+}
+.description{
+    position: relative;
+    padding: 0 var(--padding-3xs);
+}
+
+.description-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis " [........]";
+    max-height: 3em; /* Adjust based on line height */
+}
+
+.read-more {
+    background: none;
+    border: none;
+    color: var(--color-black);
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: var(--padding-3xs);
+    padding: 0;
+    margin: 0;
+    transform: translateY(100%);
+    background-color: var(--color-white);
+}
+.description-text.expanded {
+    display: block;
+    max-height: none;
+    -webkit-line-clamp: none;
+}

@@ -100,7 +100,7 @@
         </script>
       </label>
     </div>
- 
+
   </div>
 
   <div class="main-ctr">
@@ -112,11 +112,106 @@
 
     <div class="ctr2">
       <h3>Explore The World of Management</h3>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus molestiae sint, quis dolorum ducimus consectetur beatae voluptates voluptate est. Tempora dignissimos unde perspiciatis eaque quibusdam vero minima corporis tenetur sint.</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus molestiae sint, quis dolorum ducimus
+        consectetur beatae voluptates voluptate est. Tempora dignissimos unde perspiciatis eaque quibusdam vero minima
+        corporis tenetur sint.</p>
     </div>
 
-    <div class="card-ctr">
+    <div class="card-wrapper">
 
+      <div class="card technical-project-management">
+        <div class="card-heading">
+          <h3>Technical Project Management</h3>
+          <div class="i">i</div>
+        </div>
+        <div class="description">
+          <p class="description-text">
+            <b>Description:</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum tempore esse quia minus
+            ducimus sequi!
+          </p>
+          <button class="read-more">Read More</button>
+        </div>
+        <div class="card-ctr1-1">
+
+        </div>
+      </div>
+
+      <div class="card threadbuild">
+        <div class="card-heading">
+          <h3> Threadbuild </h3>
+          <div class="i">i</div>
+        </div>
+        <div class="description">
+          <p class="description-text">
+            <b>Description:</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum tempore esse quia minus
+            ducimus sequi! Exercitationem, aliquam fugit! Ad delectus quia optio exercitationem.
+          </p>
+          <button class="read-more">Read More</button>
+        </div>
+        <div class="card-ctr2-1">
+
+        </div>
+      </div>
+
+      <div class="card structure-your-pointer">
+        <div class="card-heading">
+          <h3>Structuer Your Pointer</h3>
+          <div class="i">i</div>
+        </div>
+        <div class="description">
+          <p class="description-text">
+            <b>Description:</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum tempore esse quia minus
+            ducimus sequi! Exercitationem, aliquam fugit! Ad delectus quia optio exercitationem.
+          </p>
+          <button class="read-more">Read More</button>
+        </div>
+        <div class="card-ctr3-1">
+
+        </div>
+      </div>
+
+      <div class="card methode-4sa">
+        <div class="card-heading">
+          <h3>4SA Method</h3>
+          <div class="i">i</div>
+        </div>
+        <div class="description">
+          <p class="description-text">
+            <b>Description:</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit possimus maxime,
+            voluptatem cum dolor quis quo obcaecati? Sed quis natus tempore ipsam perspiciatis nobis, dolorum
+            voluptatibus laborum accusantium est maxime.
+          </p>
+          <button class="read-more">Read More</button>
+        </div>
+        <div class="card-ctr4-1">
+        </div>
+      </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const descriptions = document.querySelectorAll('.description');
+
+          descriptions.forEach(description => {
+            const textElement = description.querySelector('.description-text');
+            const button = description.querySelector('.read-more');
+
+            // Check if the text exceeds the max height
+            if (textElement.scrollHeight <= textElement.clientHeight) {
+              button.style.display = 'none';
+            }
+
+            button.addEventListener('click', function () {
+              if (textElement.classList.contains('expanded')) {
+                textElement.classList.remove('expanded');
+                this.textContent = 'Read More';
+              } else {
+                textElement.classList.add('expanded');
+                this.textContent = 'Read Less';
+              }
+            });
+          });
+        });
+
+      </script>
     </div>
   </div>
 

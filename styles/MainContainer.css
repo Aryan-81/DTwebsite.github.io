@@ -1,0 +1,40 @@
+@import url(Cards.css);
+
+.main-ctr {
+    max-width: 70dvw;
+    margin: 0 auto;
+}
+
+.ctr1 {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-poppins);
+}
+
+.ctr1>h1 {
+    color: var(--color-blue);
+    font-size: var(--font-size-9xl);
+}
+
+.ctr1>button {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    font-size: var(--font-size-xs);
+    font-family: inherit;
+    border-style: none;
+    border-radius: var(--br-8xs);
+    padding: var(--padding-4xs) var(--padding-5xl);
+}
+
+.ctr1>button:hover {
+    background-color: var(--color-bluefade);
+}
+
+.ctr2{
+    border-radius: var(--br-8xs);
+    background-color: var(--color-whitesmoke-300);
+    padding: var(--padding-xs);
+    font-family: var(--font-poppins);
+}
