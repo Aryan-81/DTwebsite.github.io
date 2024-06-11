@@ -234,6 +234,7 @@
 }
 .datapoint-container .arrow{
     padding: 0 var(--padding-xl);
+    transform: rotate(180deg);
 }
 .datapoint-heading{
     width: 100%;
